@@ -1,0 +1,10 @@
+#pragma once
+
+#define PROCE_REVEAL_DEVICE 0x8011
+#define IOCTL_OPEN_PROCESS CTL_CODE(PROCE_REVEAL_DEVICE,0x800 , METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+struct OpenProcessData
+{
+	ULONG ProcessId;
+	ACCESS_MASK Access;
+};
